@@ -48,7 +48,7 @@ def cluster_shap_consistency(shap_matrix):
 
     variance = np.var(sim_values)
 
-    # 使用平滑函数归一化（避免极端值）
+    
     norm_score = 1 / (1 + variance * 10)
     return round(norm_score, 4)
 
@@ -149,3 +149,4 @@ for tag, (csv_path, label_col) in DATA_CONFIG.items():
     plot_consistency_scores(consistency_scores, tag)
 
 print("\nAll done!")
+
