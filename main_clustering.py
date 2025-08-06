@@ -27,7 +27,7 @@ def run_clustering(df, dataset_name, kmeans_k=3, dbscan_eps=0.5, dbscan_min_samp
     output_csv = f"clustered_{dataset_name.lower()}.csv"
     df.to_csv(output_csv, index=False)
 
-    print(f"\n✅ {dataset_name} Clustering complete")
+    print(f"\n {dataset_name} Clustering complete")
     print(f"- The clustering results are saved as：{output_csv}")
 
     return df, X, labels_km, labels_db
@@ -99,3 +99,4 @@ print("- kmeans_synthetic.png")
 print("- kmeans_real.png")
 print("- dbscan_synthetic.png")
 print("- dbscan_real.png")
+
